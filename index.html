@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portofolio Pribadi - Web Developer">
+    <title>Portofolio - Web Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header id="home">
+        <div class="container">
+            <div class="hero-content">
+                <!-- Foto Profil -->
+            <div class="profile-img">
+                <img src="https://i.pinimg.com/736x/c8/00/48/c80048643e96557e775eafeb1eea2207.jpg" alt="Foto Profil">
+            </div>
+                <h1>Hai, Saya <span class="name">Fatih</span></h1>
+                <p>Web Developer | UI/UX Enthusiast | Teknologi & Inovasi</p>
+                <a href="#about" class="cta-btn">Pelajari Lebih Lanjut</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container"></div>
+            <h2>Tentang Saya</h2>
+            <p>Saya adalah seorang pengembang web yang bersemangat dengan pengalaman dalam membangun aplikasi web interaktif dan desain UI/UX yang responsif. Saya memiliki keterampilan dalam HTML, CSS, JavaScript, dan React.js.</p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2>Keahlian</h2>
+            <div class="skills-grid">
+                <div class="skill">
+                    <h3>HTML & CSS</h3>
+                    <p>Desain responsif dan semantik menggunakan HTML5 & CSS3.</p>
+                </div>
+                <div class="skill">
+                    <h3>JavaScript</h3>
+                    <p>Pengalaman dalam pengembangan aplikasi interaktif dengan JS.</p>
+                </div>
+                <div class="skill">
+                    <h3>React.js</h3>
+                    <p>Membangun aplikasi dinamis menggunakan React dan hooks.</p>
+                </div>
+                <div class="skill">
+                    <h3>Node.js</h3>
+                    <p>Backend aplikasi menggunakan Node.js dan Express.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Kontak Saya</h2>
+            <form id="contact-form">
+                <input type="text" id="name" placeholder="Nama Anda" required>
+                <input type="email" id="email" placeholder="Email Anda" required>
+                <textarea id="message" placeholder="Pesan Anda" required></textarea>
+                <button type="submit" class="cta-btn">Kirim Pesan</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 fatzxyz | Web Developer</p>
+        </div>
+    </footer>
+
+    <script>
+        // Form Submission Alert (Optional)
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('Pesan Anda telah dikirim! Terima kasih telah menghubungi saya.');
+});
+    </script>
+    <style>
+        * {
+    font-family: 'poppins',sans-serif;
+    margin: 0;
+    padding: 0;
+}
+body {
+    
+    background-color: #070707;
+    color: #ffffff;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    background: #161616 ;
+    color: rgb(255, 255, 255);
+    padding: 100px 0;
+    text-align: center;
+}
+
+header .hero-content h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+header .hero-content .name {
+    color: #f1c40f ;
+    font-weight: 700;
+}
+
+header .hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+header .cta-btn {
+    background-color: #f1c40f ;
+    color: #000000;
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+header .cta-btn:hover {
+    background-color: #333;
+}
+
+/* Section */
+section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #f1c40f ;
+}
+
+/* Skills Section */
+.skills-grid {
+    display: flex;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    justify-items: center;
+    overflow-y: scroll;
+}
+
+.skill {
+    background: #161616;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.skill h3 {
+    color: #ffffff;
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+/* Projects Section */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project {
+    background: #161616;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.project img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.project a {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 8px 20px;
+    background-color: #f1c40f ;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.project a:hover {
+    background-color: #333333;
+}
+
+/* Contact Section */
+form input,
+form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+form button {
+    background-color: #f1c40f ;
+    color: rgb(0, 0, 0);
+    padding: 12px 30px;
+    border-radius: 30px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #333;
+}
+
+/* Footer */
+footer {
+    background-color: #161616;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    font-size: 1rem;
+}
+/* Styling untuk Foto Profil */
+.profile-img {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.profile-img img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #ffffff; /* Border putih untuk efek elegan */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    object-fit: cover; /* Agar gambar tetap proporsional */
+}
+
+/* Styling untuk teks di sebelah foto */
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+    </style>
+   
+</body>
+</html>
